@@ -1,6 +1,6 @@
 ❤️ Lovebox ❤️
 ===
-DIY project to lasercut a lovebox like https://en.lovebox.love/
+DIY project to lasercut a lovebox inspired from https://en.lovebox.love/. It was a homemade Christmas present for my mom. So I can send her messages or pictures at any time to start the day motivated. When a new message is received, the heart moves in front of the box. It stops as soon as the message has been read (more specifically the built-in brightness sensor reacts when the box is opened). Have fun with the replica!
 
 ![](https://i.imgur.com/5MPBxsc.jpg)
 ![](https://github.com/julisa99/Lovebox/blob/master/docs/images/demo_lovebox.gif)
@@ -12,17 +12,17 @@ DIY project to lasercut a lovebox like https://en.lovebox.love/
 4. [Light sensor](https://www.amazon.de/dp/B01LX0ZQHL)
 5. [10kΩ resistor](https://www.amazon.de/dp/B072BHDBDG)
 6. [OLED display](https://www.amazon.de/dp/B074NJMPYJ)
-7. [PCB](https://www.amazon.de/dp/B00VL1KHJQ)
-8. [1mm acryl](https://www.amazon.de/dp/B07T4JSXYR) (to cut the display)
-9. [Darkening foil/dazzle strip](https://www.amazon.de/dp/B001CC6VYO)
+7. [Perfboard](https://www.amazon.de/dp/B00VL1KHJQ)
+8. [Breakaway PCB Connector](https://www.amazon.de/dp/B01M69EA9O)
+9. [1mm acryl](https://www.amazon.de/dp/B07T4JSXYR) (to cut the display)
+10. [Darkening foil/dazzle strip](https://www.amazon.de/dp/B001CC6VYO)
 
 ## Composition 
-Below you can see where the OLED display, the light sensor with resistor and the servo motor are connected to the WeMos D1 Mini.
-The second photo is the soldered assembly, where I used two PCBs to have the power supply, which is plugged into the microcontroller board, on the ground and so that the OLED display can lie straight on top.
+Below you can see where the OLED display, the light sensor with resistor and the servo motor are connected to the WeMos D1 Mini. The second photo is the soldered assembly. As you can see the micro-USB connector of the microcotroller board is at the ground. On top of the microcontroller a perfboard is soldered. Now the servo motor is added and also soldered to the perfboard. Notice the resistor and the light sensor that are also soldered to the board, with the light sensor pointing up. The display is soldered to another perfboard. The board provides a flat surface to hold the display in place. It is put on the motor and is connected to the other perfboard by using a Breakaway PCB Connector. It serves as a spacer to hold the other board above the motor.
 ![](https://i.imgur.com/Y7jeOma.png)
 ![](https://i.imgur.com/9Fiw6kp.jpg)
 
-After it, you have to cut the SVGs for the case, cap and hearts out of the 3mm wood with the lasercutter. Additionally, you have to cut the display out of the 1mm acryl with the lasercutter. Then I have stuck the little heart on the larger heart and painted it red. Then I have cut with a scissors the display out of the darkening foil and stuck it on the acryl display. Then I have stuck the white servo horn into the back of the heart.
+After finishing the electronics, you have to cut the case, cap and hearts out of the 3mm wood and the display out of the 1mm acryl with a lasercutter. For that an SVG is provided containing the cutting plan. Then you have to glue the little heart on the larger heart and paint it red. After that, you have cut with scissors the display out of the darkening foil and put it on the acryl display. Finally, stuck the white servo horn into the back of the heart.
 
 ![](https://i.imgur.com/y2joo0B.jpg)
 
