@@ -22,7 +22,7 @@ Below you can see where the OLED display, the light sensor with resistor and the
 ![](https://i.imgur.com/Y7jeOma.png)
 ![](https://i.imgur.com/9Fiw6kp.jpg)
 
-After finishing the electronics, you have to cut the case, cap and hearts out of the 3mm wood and the display out of the 1mm acryl with a lasercutter. For that [four SVGs are provided](https://github.com/julisa99/Lovebox/tree/master/lasercut_files) containing the cutting plan. Then you have to glue the little heart on the larger heart and paint it red. After that, you have cut with scissors the display out of the darkening foil and put it on the acryl display. Finally, stuck the white servo horn into the back of the heart.
+After finishing the electronics, you have to cut the case, cap and hearts out of the 3mm wood and the display out of the 1mm acryl with a lasercutter. For that [four SVGs are provided](https://github.com/julisa99/Lovebox/tree/master/lasercut_files) containing the cutting plan. Then you have to glue the little heart on the larger heart and paint it red. After that, you have to cut with scissors the size of the display out of the darkening foil and put it on the acryl display. Finally, stuck the white servo horn into the back of the heart.
 
 ![](https://i.imgur.com/y2joo0B.jpg)
 
