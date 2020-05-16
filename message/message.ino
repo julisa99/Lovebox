@@ -53,7 +53,7 @@ void wifiConnect() {
 void getGistMessage() {
   const int httpsPort = 443;
   const char* host = "gist.githubusercontent.com";
-  const char fingerprint[] = "CC AA 48 48 66 46 0E 91 53 2C 9C 7C 23 2A B1 74 4D 29 9D 33";
+  const char fingerprint[] = "70 94 DE DD E6 C4 69 48 3A 92 70 A1 48 56 78 2D 18 64 E0 B7";
   
   WiFiClientSecure client;
   client.setFingerprint(fingerprint);
@@ -117,6 +117,10 @@ void setup() {
 }
 
 void loop() {
+  if (WiFi.status() != WL_CONNECTED) {
+    wifiConnect();
+  }
+  
   if(wasRead){
     getGistMessage();   
   }
