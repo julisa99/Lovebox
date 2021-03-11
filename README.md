@@ -9,7 +9,7 @@ DIY project to lasercut a lovebox inspired from https://en.lovebox.love/. It was
 1. [3mm](https://www.amazon.de/dp/B0002FQKX4) or [4mm wood](https://www.amazon.de/dp/B06Y48L765)(to cut the case + heart)
 2. [WeMos D1 Mini](https://www.amazon.de/dp/B01N9RXGHY)
 3. [Servo motor](https://www.amazon.de/dp/B07236KYVC)
-4. [Light sensor](https://www.amazon.de/dp/B01LX0ZQHL)
+4. [Light sensor](https://www.amazon.de/dp/B00SWO73DS)
 5. [10kΩ resistor](https://www.amazon.de/dp/B072BHDBDG)
 6. [OLED display](https://www.amazon.de/dp/B074NJMPYJ)
 7. [Perfboard](https://www.amazon.de/dp/B00VL1KHJQ)
