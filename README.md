@@ -40,9 +40,11 @@ If this is different from the previous one, then the algorithm looks into the se
 
 ## Acknowledgements
 
-Marcel (co-founder of ThingPulse, which provides the open-source display driver used in the project) was one of the first, who [wrote about my project and added more photos of the soldering](https://frightanic.com/iot/the-lovebox-a-gift-from-a-maker/). He made suggestions for improvement there, which I integrated.
+Thanks to [@blblblu](https://github.com/blblblu/) for the idea of hosting the message content for free on GitHub Gist and [Deus](https://github.com/Daniel-Amadeus/) for helping me with my first lasercut attempts.
 
-Thanks to @Nounnours who found out the reason for the display error with binary images and was able to solve it. I have also included this solution. 
+[Marcel](https://github.com/marcelstoer/) (co-founder of ThingPulse, which provides the open-source display driver used in the project) was one of the first, who [wrote about my project and added more photos of the soldering](https://frightanic.com/iot/the-lovebox-a-gift-from-a-maker/). He made suggestions for improvement there, which I integrated.
+
+Thanks to [@Nounnours](https://github.com/Nounnours/) who found out the reason for the display error with binary images and was able to solve it. I have also included this solution. 
 
 I am very excited that so many of you have already been able to build your own Lovebox with my instruction and that you are sending me messages, photos and videos of it. I want to especially share two versions. Bartha Zoltán has integrated the Lovebox into a hexagonal shape and Fabian Weller has designed the Lovebox for Nelly with small shiny silver and red hearts.
 
