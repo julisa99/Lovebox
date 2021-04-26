@@ -39,9 +39,17 @@ If this is different from the previous one, then the algorithm looks into the se
 
 ![](https://i.imgur.com/07qDPxb.png)
 
-## Recommended forks
+## Acknowledgements
 
-Marcel (co-founder of ThingPulse, which provides the open-source display driver used in the project) was one of the first, who [wrote about my project and added more photos of the soldering](https://frightanic.com/iot/the-lovebox-a-gift-from-a-maker/).
+Marcel (co-founder of ThingPulse, which provides the open-source display driver used in the project) was one of the first, who [wrote about my project and added more photos of the soldering](https://frightanic.com/iot/the-lovebox-a-gift-from-a-maker/). He made suggestions for improvement there, which I integrated.
+
+Thanks to @Nounnours who found out the reason for the display error with binary images and was able to solve it. I have also included this solution. 
+
+I am very excited that so many of you have already been able to build your own Lovebox with my tutorial and that you are sending me messages, photos and videos of it. I do not want to deprive you of two copies. Bartha Zoltán has integrated the Lovebox into a hexagonal shape and Fabian Weller has designed the Lovebox for Nelly with small shiny silver and red hearts.
+
+![](https://user-images.githubusercontent.com/8758907/116134112-d2340e00-a6cf-11eb-9076-082b64c76a75.png)
+
 Feel also free to check out [Julian's fork using the Arduino Nano 33 IoT](https://github.com/JulianBeaulieu/DIY-LoveBox).
+
 
 ###### tags: `Lovebox` `Instruction`
