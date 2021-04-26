@@ -15,15 +15,15 @@ int pos = 90;
 int increment = -1;
 int lightValue;
 String line;
-String modus;
+String messageMode;
 char idSaved; 
 bool wasRead;  
 
 void drawMessage(const String& message) {
   oled.clear();
 
-  // Unterscheide zwischen Text und Bild
-  if(modus[0] == 't'){
+  // differentiat between 't'ext and image message
+  if(messageMode[0] == 't'){
     oled.drawStringMaxWidth(0, 0, 128, message);    
   } 
   else {
@@ -42,8 +42,8 @@ void drawMessage(const String& message) {
 void wifiConnect() {
   if (WiFi.status() != WL_CONNECTED) {
     WiFi.begin(ssid, password);
-  
-    // Warte auf Verbindung
+
+    // connecting to WiFi
     while (WiFi.status() != WL_CONNECTED) {
       delay(500);
     }
@@ -58,7 +58,7 @@ void getGistMessage() {
   WiFiClientSecure client;
   client.setFingerprint(fingerprint);
   if (!client.connect(host, httpsPort)) {
-    return; // Verbindung fehlgeschlagen
+    return; // failed to connect
   }
   
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
@@ -73,31 +73,45 @@ void getGistMessage() {
     }
   }
   String id = client.readStringUntil('\n'); 
-  if(id[0] != idSaved){ // Neue Nachricht
+  if(id[0] != idSaved){ // new message
+    messageMode = client.readStringUntil('\n');
+    if (messageMode[0] == 't'){
+      line = client.readStringUntil(0);
+    } else {
+      // binary image is corrupted if readStringUntil() takes too long
+      // fix: read string line by line
+      line = "";
+      for (int i = 0; i < 64; i++)     
+      {
+        line += client.readStringUntil('\n');
+        line += "\n";
+      }
+      if (line.length() != 8256)
+      {
+        getGistMessage();
+      }
+    }
     wasRead = 0;
     idSaved = id[0];
     EEPROM.write(142, idSaved);
     EEPROM.write(144, wasRead);
     EEPROM.commit(); 
-
-    modus = client.readStringUntil('\n');
-    line = client.readStringUntil(0);
     drawMessage(line);
   }
 }
 
 void spinServo(){
     myservo.write(pos);      
-    delay(50);    // Warte 50ms um den Servo zu drehen
+    delay(50);    // wait 50ms to turn servo
 
-    if(pos == 75 || pos == 105){ // Drehbereich zwischen 75°-105°
+    if(pos == 75 || pos == 105){ // 75°-105° range
       increment *= -1;
     }
     pos += increment;
 }
 
 void setup() {
-  myservo.attach(16);       // Servo an D0
+  myservo.attach(16);       // Servo on D0
   
   oled.init();
   oled.flipScreenVertically();
@@ -126,12 +140,15 @@ void loop() {
   }
   
   while(!wasRead){   
-    spinServo();    // Drehe Herz
-    lightValue = analogRead(0);      // Lese Helligkeitswert
+    yield();
+    spinServo();    // turn heart
+    lightValue = analogRead(0);      // read light value
     if(lightValue > 300) { 
       wasRead = 1;
       EEPROM.write(144, wasRead);
       EEPROM.commit();
     }
   }
+  
+  delay(60000); // wait a minute before request gist again
 }
